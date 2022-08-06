@@ -58,4 +58,56 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
+  background-color: #f0f0f0;
+}
+
+.needle {
+  width: 3px;
+  height: 65px;
+  /* background-color: var(--primary-color); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%);
+  border-radius: 50% 50% 0 0;
+}
+
+.needle.second {
+  height: 100px;
+  transform: translate(-50%, -100%) rotate(15deg);
+  background-color: red;
+}
+.needle.minute {
+  height: 85px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  background-color: blue;
+}
+.needle.hour {
+  /* height: 85px; */
+  transform: translate(-50%, -100%) rotate(90deg);
+  background-color: black;
+}
+
+.center-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: aquamarine;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
